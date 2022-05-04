@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/color.css">
+    <link rel="stylesheet" href="/css/user.css">
+    <script src="/js/plotly.min.js"></script>
+    <title>Compte</title>
+
+</head>
+<body>
+    <div id="chart">
+
+    </div>
+</body>
+
+<script>
+
+var cnt = 0;
+var taux = 0.5;
+var layout = {
+    title: 'Courbe d\'alcoolemie',
+    displayModeBar: false
+};
+
+
+Plotly.newPlot('chart',[{
+    y:[taux],
+    type:'line'
+}], layout);
+
+
+//Se répète tout les 100ms
+setInterval(function(){
+
+    taux = taux - (0.085/3600);
+    
+    Plotly.extendTraces('chart',{ y:[[taux]]}, [0]);
+    cnt++;
+
+    Plotly.relayout('chart',{
+        xaxis:{
+                range: [cnt-50,cnt],
+                type: 'date'
+            },
+        yaxis:{
+            range: [0, taux + 0.1]
+        }
+    });
+
+    if(cnt > 50){
+        Plotly.relayout('chart',{
+            xaxis:{
+                range: [cnt-50,cnt]
+            },
+            yaxis:{
+                range: [0, taux + 0.1]
+            }
+        });
+    }
+},100);
+
+</script>
+
+</html>

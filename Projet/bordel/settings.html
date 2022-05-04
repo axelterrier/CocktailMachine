@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/color.css">
+    <link rel="stylesheet" href="/css/settings.css">
+    <title>Paramètres</title>
+</head>
+<body>
+    <div class="userInfo">
+        <img src="/icon/user.png" class="profilePicture" alt="">
+        <h3 class="pseudo">Axel TERRIER</h3>
+        <h4 class="email">email@mail.com</h4>
+        <button class="edit">Editer le profil › </button>
+    </div>
+    <div class="category">
+        <h3 class="title">Contenu</h3>
+    </div>
+
+    <div class="line">
+        <img src="/icon/heart.png" class="icon" alt="">
+        <h4 class="lineName">Favoris</h4>
+        <h4 class="arrow"> › </h4>
+    </div>
+
+    <div class="category">
+        <h3 class="title">Preferences</h3>
+    </div>
+
+    <div class="line">
+        <img src="/icon/moon.png" class="icon" alt="">
+        <h4 class="lineName">Dark Mode</h4>
+
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                 <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+       </div>
+    </div>
+
+    <div class="line">
+        <img src="/icon/world.png" class="icon" alt="">
+        <h4 class="lineName">Langue</h4>
+        <h4 class="arrow"> › </h4>
+    </div>
+
+    <div class="category">
+        <h3 class="title">Profil</h3>
+    </div>
+
+    <div class="line">
+        <img src="/icon/height.png" class="icon" alt="" style="flex: 1">
+        <h4 class="lineName" style="flex: 1">Taille</h4>
+        <form oninput="result.value=a.value" style="flex: 8">
+            <input name="a" type="range"  min="140" max="200" value="160" oninput="parseInt(updateHeightInput(value))" class="profile" id="height">
+            <output name="result" id="height"></output>
+            <p>cm</p>
+        </form>
+    </div>
+
+    <div class="line">
+        <img src="/icon/weight.png" class="icon" alt="" style="flex: 1">
+        <h4 class="lineName" style="flex: 1">Poids</h4>
+        <form oninput="result.value=a.value" style="flex: 8">
+            <input name="a" type="range" min="50" max="110" value="70" oninput="parseInt(updateWeightInput(value))" class="profile" id="weight">
+            <output name="result" id="weight"></output>
+            <p>kg</p>
+        </form>
+    </div>
+
+    <div class="line">
+        <img src="/icon/gender.png" class="icon" alt="">
+        <h4 class="lineName">Genre</h4>
+        <button class="female active" id="female" style="margin-right: 5px;">Femme</button>
+        <button class="male" id="male" style="margin-right: 5px;">Homme</button>
+    </div>
+
+
+    
+
+    <button class="return" onclick="history.go(-1)"">
+        <span class="back back-left"></span>
+    </button>
+    
+</body>
+<script src="/js/darkThemeToggle.js"></script>
+<script src="/js/slider.js"></script>
+</html>
