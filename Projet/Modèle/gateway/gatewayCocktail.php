@@ -26,7 +26,6 @@ class GatewayCocktail
     }
 
     public function GetIngredientNumberPerCocktail(int $idCocktail){
-        $tabN = array();
         $query = "SELECT COUNT(*) FROM Cocktail_Composition WHERE Cocktail_Composition.ID_Cocktail=:idCocktail";
         $this->db->executeQuery($query, array(':idCocktail' => array($idCocktail, PDO::PARAM_STR)));
         $res = $this->db->getResults();
@@ -38,6 +37,16 @@ class GatewayCocktail
         
     }
 
+    public function GetInfoCocktail(int $idCocktail){
+        $query = "SELECT * FROM Cocktail WHERE Cocktail_ID=:idCocktail";
+        $this->db->executeQuery($query, array(':idCocktail' => array($idCocktail, PDO::PARAM_STR)));
+        $res = $this->db->getResults();
+        
+        foreach($res as $row){
+            $tabN[] = new Cocktail($row['Cocktail_ID'], $row['Nom_Cocktail'], $row['Description_Cocktail'], $row['Est_Disponible'], 0, $row['Image_Cocktail']);
+        }
+        return $tabN[0];
+    }
     
 
 }

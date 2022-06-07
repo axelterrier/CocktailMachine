@@ -1,11 +1,16 @@
 <?php
 require_once('../config/config.php');
 require_once('../Modèle/gateway/GatewayIngredient.php');
+require_once('../Modèle/gateway/GatewayCocktail.php');
 
-$test = new GatewayIngredient($con);
+$ingr = new GatewayIngredient($con);
+$cock = new GatewayCocktail($con);
 //Crée la gateway
 //Fait appel à la classe
-$u = $test->GetIngredient(2); //Passer l'ID en dynamique
+$ID = $_GET['ID'];
+
+$v = $cock->GetInfoCocktail($ID); //Passer l'ID en dynamique
+$u = $ingr->GetIngredient($ID);
 
 ?>
 
@@ -32,8 +37,10 @@ $u = $test->GetIngredient(2); //Passer l'ID en dynamique
 <body>
     <div class="mainView">
         <div class="upperRow">
-            <img src="/projet/vue/image/arrow.png" alt="" class="backArrow">
-            <h2 class="nomCocktail">Acapulco</h2>
+            <a href="/Projet/Vue/cocktailPage.php">
+                <img src="/projet/vue/image/arrow.png" alt="" class="backArrow">
+            </a>
+             <h2 class="nomCocktail"><?php echo $v->Nom_Cocktail; ?></h2>
             <img src="/projet/vue/image/heart.png" alt="" class="favorite">
         </div>
         <div class="middleRow">
@@ -66,7 +73,7 @@ $u = $test->GetIngredient(2); //Passer l'ID en dynamique
                     <div class="imageContainer">
                         <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($ingredient->Image_Url).'" alt="" class="imageIngredient">' ?>
                     </div>
-                   <h4 class="IngredientName"><?php $ingredient->Ingredient_Name ?></h4>
+                   <h4 class="IngredientName"><?php echo $ingredient->Ingredient_Name ?></h4>
                    <p class="quantity">50mL</p>
                 </div>
             </div>

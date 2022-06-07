@@ -90,19 +90,20 @@ $u = $test->GetAvailableCocktail();
             <?php
                 foreach($u as $cocktail){
             ?>
-            <div class="card" >
-                <div class="cardFlex"  style="background-color: #ffb3ba;">
-                <div class="imageContainer">
-                    <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($cocktail->Image_Cocktail).'" alt="" class="imageBackground">' ?>
-                </div>
-                <h4 class="cocktailName"><?php echo $cocktail->Nom_Cocktail; ?></h4>
-                    <div class="gradeContainer">
-                        <img src="/projet/vue/image/star.png" alt="" class="star">
-                        <p class="grade"><?php echo $cocktail->Cocktail_ID; ?></p>
+            <a href="<?php echo 'recette.php?ID='.$cocktail->Cocktail_ID?>" class='cardLink'>
+                <div class="card" >
+                    <div class="cardFlex"  style="background-color: #ffb3ba;">
+                    <div class="imageContainer">
+                        <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($cocktail->Image_Cocktail).'" alt="" class="imageBackground">' ?>
+                    </div>
+                    <h4 class="cocktailName"><?php echo $cocktail->Nom_Cocktail; ?></h4>
+                        <div class="gradeContainer">
+                            <img src="/projet/vue/image/star.png" alt="" class="star">
+                            <p class="grade"><?php echo $cocktail->Cocktail_ID; ?></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+            </a>
             <?php
                 }
             ?>

@@ -30,8 +30,8 @@ class GatewayIngredient
         $this->db->executeQuery($query);
         $res = $this->db->getResults();
         foreach($res as $row){
-            $Nombre_Ingredient = $this->GetIngredientNumberPerCocktail($row['Cocktail_ID']);
-            $tabN[] = new Ingredient($row['ID_Ingredient'], $row['Ingredient_Name'], $row['Viscosite'], $row['Taux_Alcool'], $row['Est_Disponible']);
+            $Nombre_Ingredient = $this->GetIngredient($row['Cocktail_ID']);
+            $tabN[] = new Ingredient($row['ID_Ingredient'], $row['Ingredient_Name'], $row['Viscosite'], $row['Taux_Alcool'], $row['Est_Disponible'], $row['Image_Url']);
         }
         return $tabN;
     }
