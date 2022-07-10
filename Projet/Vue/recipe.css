@@ -47,6 +47,14 @@ body {
     width: 30px;
 }
 
+button.favoriteButton{
+    height: 30px;
+    width: 30px;
+    border: none;
+    outline: none ;
+    background-color: transparent ;
+}
+
 .middleRow{
     height: 50%;
     width: 100%;

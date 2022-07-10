@@ -1,4 +1,13 @@
 <?php
+
+session_start();
+
+if (isset($_SESSION['user'])) {
+    // logged in
+} else {
+    header("Location:signin.php");
+}
+
 require_once('../config/config.php');
 require_once('../Modèle/gateway/GatewayIngredient.php');
 require_once('../Modèle/gateway/GatewayCocktail.php');

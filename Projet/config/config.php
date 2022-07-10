@@ -2,6 +2,7 @@
 require_once("connection.php");
 require_once("../Modèle/cocktail.php");
 require_once ("../Modèle/ingredient.php");
+require_once ("../Modèle/utilisateur.php");
 // liste des modules a inclure
 $dConfig['includes']=array('Validation.php');
 

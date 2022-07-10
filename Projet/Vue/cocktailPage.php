@@ -1,8 +1,20 @@
 <?php
+session_start();
+
+if (isset($_SESSION['user'])) {
+    // logged in
+    $_SESSION['lastPage'] = 'cocktailPage';
+} else {
+    header("Location:signin.php");
+}
 require_once('../config/config.php');
+require_once('../Modèle/gateway/GatewayIngredient.php');
 require_once('../Modèle/gateway/GatewayCocktail.php');
 
+
+
 $test = new GatewayCocktail($con);
+$ingr =  new GatewayIngredient($con);
 //Crée la gateway
 //Fait appel à la classe
 $u = $test->GetAvailableCocktail();
@@ -46,43 +58,28 @@ $u = $test->GetAvailableCocktail();
             </div>
         </div>
         <div class="filters">
+            <?php
+                foreach($u as $cocktail){
+                    $v = $ingr->GetIngredient($cocktail->Cocktail_ID);
+                    foreach($v as $ingredient){
+                        ?>
+                    <div class="filter">
+                        <div class="filterFlex">
+                        <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($ingredient->Image_Url).'" alt="" class="filterImage">' ?>
+                            <p class="filterName"><?php echo $ingredient->Ingredient_Name; ?></p>
+                        </div>
+                    </div> 
+                    <?php      
+                    }
+                }
+            ?>
+             
             <div class="filter">
                 <div class="filterFlex">
                     <img src="/projet/vue/image/filter.png" alt="" class="filterImage">
                     <p class="filterName">filterName</p>
                 </div>
-            </div>
-            <div class="filter">
-                <div class="filterFlex">
-                    <img src="/projet/vue/image/filter.png" alt="" class="filterImage">
-                    <p class="filterName">filterName</p>
-                </div>
-            </div>
-            <div class="filter">
-                <div class="filterFlex">
-                    <img src="/projet/vue/image/filter.png" alt="" class="filterImage">
-                    <p class="filterName">filterName</p>
-                </div>
-            </div>
-            <div class="filter">
-                <div class="filterFlex">
-                    <img src="/projet/vue/image/filter.png" alt="" class="filterImage">
-                    <p class="filterName">filterName</p>
-                </div>
-            </div>
-            <div class="filter">
-                <div class="filterFlex">
-                    <img src="/projet/vue/image/filter.png" alt="" class="filterImage">
-                    <p class="filterName">filterName</p>
-                </div>
-            </div>
-            <div class="filter">
-                <div class="filterFlex">
-                    <img src="/projet/vue/image/filter.png" alt="" class="filterImage">
-                    <p class="filterName">filterName</p>
-                </div>
-            </div>
-            
+            </div>           
         </div>
         <h2 class="cocktailPresentation">Trendings</h2>
         <!--Ajouter carousel de carte-->

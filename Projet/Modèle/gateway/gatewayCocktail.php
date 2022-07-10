@@ -48,6 +48,67 @@ class GatewayCocktail
         return $tabN[0];
     }
     
+    #permets de tester si un cocktail est déja mis en favori, retourne True si il est liké et False si non
+    public function IsLike(string $idUtilisateur,int $idCocktail){
+        $tabN = array();
+        $query = "SELECT COUNT(*) FROM `like` WHERE id_personne=:idUtilisateur AND id_cocktail=:idCocktail";
+        $this->db->executeQuery($query, 
+        array(':idUtilisateur' => array($idUtilisateur, PDO::PARAM_STR),
+        ':idCocktail' => array($idCocktail, PDO::PARAM_INT)));
 
+        
+        $res = $this->db->getResults();  
+        foreach($res as $row){
+            $tabN[] = $row['COUNT(*)'];
+        }
+        if($tabN[0]!=0){
+            return 1;
+        }
+        return 0;
+
+    }
+
+    public function LikeOrDislike(string $idUtilisateur,int $idCocktail){
+        $test = $this->IsLike($idUtilisateur,$idCocktail);
+        if($test==1){
+            $this->DislikeCocktail($idUtilisateur,$idCocktail);
+        }
+        else{
+            $this->LikeCocktail($idUtilisateur,$idCocktail);
+        }
+    }
+
+    public function LikeCocktail(string $idUtilisateur,int $idCocktail){
+        $query = "INSERT INTO `like` VALUES(:idCocktail,:idUtilisateur)";
+        $this->db->executeQuery($query,array(
+            ":idUtilisateur"=>array($idUtilisateur,PDO::PARAM_STR),
+            ":idCocktail"=>array($idCocktail, PDO::PARAM_INT)
+        ));
+        header("Refresh:0");
+    }
+
+    public function DislikeCocktail(string $idUtilisateur,int $idCocktail){
+        $query = "DELETE FROM `like` where id_personne=:idUtilisateur AND id_cocktail=:idCocktail";
+        $this->db->executeQuery($query,array(
+            ":idUtilisateur"=>array($idUtilisateur,PDO::PARAM_STR),
+            ":idCocktail"=>array($idCocktail, PDO::PARAM_INT)
+        ));
+        header("Refresh:0");
+    }
+
+    public function getFavorite(string $idUtilisateur){
+        $tabN = array();
+        $result = array();
+        $query = "SELECT * FROM `like` WHERE id_personne=:idUtilisateur";
+        $this->db->executeQuery($query,array(
+            ":idUtilisateur"=>array($idUtilisateur,PDO::PARAM_STR)
+        ));
+        
+        $tabN = $this->db->getResults();
+        foreach($tabN as $row){
+            array_push($result,$this->GetInfoCocktail($row['id_cocktail']));
+        }
+        return $result;
+    }
 }
 

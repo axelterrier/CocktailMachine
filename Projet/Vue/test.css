@@ -1,0 +1,76 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+#title{
+    color: black;
+}
+
+#cardSlider{
+    height: auto;
+    width: 90%;
+    overflow-y: scroll;
+}
+
+.card{
+    width: 100%;
+    height: 120px;
+    background-color: aquamarine;
+    border-radius: 15px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#cardSlider a{
+    text-decoration: none;
+    color: black;
+}
+
+.imgContainer{
+    height: 100%;
+    width: 33%;
+}
+.infoCocktail{   
+    height: 75px;
+    width: 47%;
+}
+.arrowContainer{
+    height: 100%;
+    width: 20%;
+}
+
+.cocktailImg{
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.infoCocktail{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+.cocktailInfo{
+    margin-top: -15px;
+}
+
+.arrowContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow{
+    height: 50px;
+    width: 50px;
+}

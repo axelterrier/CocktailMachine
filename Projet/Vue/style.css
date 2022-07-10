@@ -101,11 +101,12 @@ a{
 
 .filters{
     overflow: auto;
-    white-space: nowrap;
+    height: 150px;
+    width: auto;
     display: flex;
     flex-direction: row;
-    height: 180px;
     align-items: center;
+    justify-content: space-between;
 }
 
 .filters::-webkit-scrollbar{
@@ -114,14 +115,14 @@ a{
 
 .filter{
     height: 80px;
-    width: 80px;
+    width: 150px !important;
     display: inline-block;
     margin-left: 10px; 
     margin-right: 10px;
 }
 
 .filterFlex{
-    height: 70%;
+    height:100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -133,8 +134,16 @@ a{
 }
 
 .filterImage{
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: auto;
+}
+
+.filterName{
+    height: 30%;
+    width: 100%;
+    border: 2px solid black;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 .cocktailPresentation{

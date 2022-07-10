@@ -1,4 +1,13 @@
 <?php
+
+session_start();
+
+if (isset($_SESSION['user'])) {
+    // logged in
+} else {
+    header("Location:signin.php");
+}
+
 require_once('../config/config.php');
 require_once('../Modèle/gateway/GatewayIngredient.php');
 require_once('../Modèle/gateway/GatewayCocktail.php');
@@ -35,13 +44,60 @@ $u = $ingr->GetIngredient($ID);
     <title>Test UI Recette</title>
 </head>
 <body>
+
     <div class="mainView">
         <div class="upperRow">
-            <a href="/Projet/Vue/cocktailPage.php">
-                <img src="/projet/vue/image/arrow.png" alt="" class="backArrow">
-            </a>
+            <?php
+                if($_SESSION['lastPage'] == 'cocktailPage'){
+                    ?>
+                        <a href="cocktailPage.php">
+                            <img src="/projet/vue/image/arrow.png" alt="" class="backArrow">
+                        </a>
+                    <?php
+                }else{
+                    ?>
+                        <a href="favorite.php">
+                            <img src="/projet/vue/image/arrow.png" alt="" class="backArrow">
+                        </a>
+                    <?php
+                }
+            ?>
+            
              <h2 class="nomCocktail"><?php echo $v->Nom_Cocktail; ?></h2>
-            <img src="/projet/vue/image/heart.png" alt="" class="favorite">
+             <?php
+                if($cock->IsLike($_SESSION['user'], $ID)){
+                    ?>
+                    <form method='post'>
+                        
+                    <?php
+                        echo "
+                        <button name='button_like' class='favoriteButton' value='like' style='border: none; background: transparent'>
+                            <img src='/projet/vue/image/heart_filled.svg' name='button_like' value='like' class='favorite'>
+                        </button>";
+                    ?>
+                    </form>
+                    <?php
+                }else{
+                    ?>
+                    <form method='post'>
+                    <?php
+                        echo"
+                        <button name='button_like' class='favoriteButton' value='like' style='border: none; background: transparent'>
+                            <img src='/projet/vue/image/heart.svg'  name='button_like' value='like' class='favorite'>
+                        </button>";
+                    ?>
+                    </form>
+                    <?php
+                }
+                if($_POST['button_like']=="like"){
+                    $tests = $cock->LikeOrDislike($_SESSION['user'], $ID);
+                    $_POST['button_like']="";
+                    
+                }
+             ?>
+            
+        
+
         </div>
         <div class="middleRow">
         </div>
@@ -82,6 +138,8 @@ $u = $ingr->GetIngredient($ID);
             ?>
         </div>
     </div>
+
+    <button></button>
 
     <div class="footer">
         <div class="checkIngredient">
