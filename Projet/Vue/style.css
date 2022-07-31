@@ -141,7 +141,6 @@ a{
 .filterName{
     height: 30%;
     width: 100%;
-    border: 2px solid black;
     text-align: center;
     word-wrap: break-word;
 }
@@ -158,6 +157,7 @@ a{
     white-space: nowrap;
     width: 100%;
     height: 60%;
+    z-index: 2;
 }
 
 .cardSlider::-webkit-scrollbar{
@@ -229,17 +229,18 @@ a{
 .footer{
     width: 100%;
     height: 15%;
-    margin-top: -25px;
+    margin-top: -30px;
+    border-radius: 25px;
     background-color: darkgreen;
     position: relative;
-    z-index: -1;
+    z-index: 1;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items:flex-end;
 }
 
-.navItem{
+.navItemLink{
     height: 50%;
     margin-bottom: 15px;
     width: auto;
@@ -247,6 +248,16 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+
+.navItem{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
 }
 
 .iconNav{

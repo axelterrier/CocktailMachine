@@ -18,6 +18,8 @@ $ingredient = new GatewayIngredient($con);
 //Crée la gateway
 //Fait appel à la classe
 $u = $test->GetAvailableCocktail();
+$v = $ingredient->setIngredientPump(1,99);
+
 
 ?>
 
