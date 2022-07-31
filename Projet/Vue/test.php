@@ -9,10 +9,12 @@ if (isset($_SESSION['user'])) {
 }
 require_once('../config/config.php');
 require_once('../Modèle/gateway/GatewayCocktail.php');
+require_once('../Modèle/gateway/GatewayIngredient.php');
 
 
 
 $test = new GatewayCocktail($con);
+$ingredient = new GatewayIngredient($con);
 //Crée la gateway
 //Fait appel à la classe
 $u = $test->GetAvailableCocktail();
@@ -58,3 +60,4 @@ $u = $test->GetAvailableCocktail();
 
 </body>
 </html>
+
