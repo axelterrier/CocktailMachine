@@ -7,8 +7,8 @@ if (isset($_SESSION['user'])) {
 } else {
     header("Location:signin.php");
 }
-require_once('../config/config.php');
-require_once('../Modèle/gateway/GatewayCocktail.php');
+require_once('/var/www/html/Projet/CocktailMachine/config/config.php');
+require_once('/var/www/html/Projet/CocktailMachine/Modele/gateway/gatewayCocktail.php');
     
 
 
@@ -41,7 +41,7 @@ $u = $test->getFavorite($_SESSION['user']);
                     </div>
                     <h4 class="cocktailName"><?php echo $cocktail->Nom_Cocktail; ?></h4>
                         <div class="gradeContainer">
-                            <img src="/projet/vue/image/star.png" alt="" class="star">
+                            <img src="/var/www/html/Projet/Vue/image/star.png" alt="" class="star">
                             <p class="grade"><?php echo $cocktail->Cocktail_ID; ?></p>
                         </div>
                     </div>

@@ -1,31 +1,26 @@
 <?php
-    if(isset($_COOKIE["Pompe"])){
+
+session_start();
+
+
+require_once('/var/www/html/Projet/CocktailMachine/config/config.php');
+require_once('/var/www/html/Projet/CocktailMachine/Modele/gateway/GatewayIngredient.php');
+require_once('/var/www/html/Projet/CocktailMachine/Modele/gateway/GatewayCocktail.php');
+
+$ingr = new GatewayIngredient($con);
+
+
+            if(isset($_COOKIE["Pompe"])){
+                        
+                $pump = json_decode($_COOKIE["Pompe"],true);
+                #$pump est de type ARRAY
                                     
-        $pump = json_decode($_COOKIE["Pompe"],true);
-        #$pump est de type ARRAY
-                            
-        for($i = 0; $i < count($pump); $i++){
-            
-            if($pump[$i]['id'] == 999){
-
+                for($i = 0; $i < count($pump); $i++){
+                    
+                    $v = $ingr->setIngredientPump($pump[$i]['id'],$pump[$i]['pump']);
+                }
             }else{
-                echo "ID de l'ingredient : ";
-                print_r($pump[$i]['id']);
-                echo '<br>';
-                echo "Numéro de la pompe : ";
-                print_r($pump[$i]['pump']);
-                echo '<br>';
-                echo '<br>';
-
-                #appeler la fonction en passant en parametre
-                #$pump[i]['pump']
-                #en tant que numéro de pomp assignée
-                #$pump[i]['id']
-                #en tant qu'id d'ingrédient
+                #Le cookie n'est pas set
             }
-        }
-    }else{
-        echo "le cookie pompe n'est pas set";
-    }
 
 ?>

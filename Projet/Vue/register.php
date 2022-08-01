@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once('../config/config.php');
-require_once('../Modèle/gateway/gatewayUtilisateur.php');
+require_once('/var/www/html/Projet/CocktailMachine/config/config.php');
+require_once('/var/www/html/Projet/CocktailMachine/Modele/gateway/gatewayUtilisateur.php');
 
 $user = new GatewayUtilisateur($con);
 //Crée la gateway
@@ -29,19 +29,19 @@ $u = $user->CheckIfUserExist('Axel');
 
         <p class="rowName">Pseudo</p>
         <div class="row">
-            <img src="image/user.svg" class="rowIcon">
+            <img src="/var/www/html/Projet/CocktailMachine/Vue/image/user.svg" class="rowIcon">
             <input type="text" placeholder="Pseudo" name="username" required>
         </div>
 
         <p class="rowName">Mot de passe</p>
         <div class="row">
-            <img src="image/lock.svg" class="rowIcon">
+            <img src="/var/www/html/Projet/CocktailMachine/Vue/image/lock.svg" class="rowIcon">
             <input type="password" placeholder="Mot de passe" name="password" required>
         </div>
 
         <p class="rowName">Confirmation du mot de passe</p>
         <div class="row">
-            <img src="image/lock.svg" class="rowIcon">
+            <img src="/var/www/html/Projet/CocktailMachine/Vue/image/lock.svg" class="rowIcon">
             <input type="password" placeholder="Retaper le même mot de passe" name="VerifPassword" required>
         </div>
 

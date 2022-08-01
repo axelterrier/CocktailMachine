@@ -8,9 +8,9 @@ if (isset($_SESSION['user'])) {
     header("Location:signin.php");
 }
 
-require_once('../config/config.php');
-require_once('../Modèle/gateway/GatewayIngredient.php');
-require_once('../Modèle/gateway/GatewayCocktail.php');
+require_once('/var/www/html/Projet/CocktailMachine/config/config.php');
+require_once('/var/www/html/Projet/Modele/gateway/gatewayIngredient.php');
+require_once('/var/www/html/Projet/Modele/gateway/gatewayCocktail.php');
 
 $ingr = new GatewayIngredient($con);
 $test2 = new GatewayIngredient($con);
@@ -224,6 +224,19 @@ $u = $ingr->GetAllIngredients();
                     //Stocker dans un cookie un JSON contenant pumpNumber
                     var Json = JSON.stringify(pumpNumber);
                     setCookie("Pompe", Json, 1)
+
+                    $.ajax({
+
+                        url : 'insertIntoDB.php',
+                        type : 'POST',
+                        success : function (result) {
+                        console.log ('success'); // Here, you need to use response by PHP file.
+                        },
+                        error : function () {
+                        console.log ('error');
+                        }
+
+                    });
                 }
 
                 function setCookie(cname, cvalue, exdays) {
