@@ -15,7 +15,7 @@ class GatewayIngredient
 
     public function GetAllIngredients(){
         $tabN = array();
-        $query = "SELECT * FROM Ingredients";
+        $query = "SELECT * FROM ingredients";
         $this->db->executeQuery($query);
         $res = $this->db->getResults();
         foreach($res as $row){
@@ -26,7 +26,7 @@ class GatewayIngredient
 
     public function GetAvailableIngredients(){
         $tabN = array();
-        $query = "SELECT * FROM Ingredients WHERE Est_Disponible = TRUE";
+        $query = "SELECT * FROM ingredients WHERE Est_Disponible = TRUE";
         $this->db->executeQuery($query);
         $res = $this->db->getResults();
         foreach($res as $row){
@@ -38,10 +38,10 @@ class GatewayIngredient
 
     public function GetIngredient(int $idCocktail) {
         $tabN = array();
-        $query = "SELECT Ingredients.Est_Disponible, Ingredients.ID_Ingredient, Ingredients.Ingredient_Name, Ingredients.Taux_Alcool, Ingredients.Viscosite, Ingredients.Image_Url, Ingredients.Pompe, Cocktail_Composition.Quantite 
-                    FROM (Cocktail INNER JOIN Cocktail_Composition ON Cocktail.Cocktail_ID = Cocktail_Composition.ID_Cocktail) 
-                        INNER JOIN Ingredients ON Ingredients.ID_Ingredient = Cocktail_Composition.Ingredient_ID 
-                    WHERE Cocktail.Cocktail_ID=:idCocktail";
+        $query = "SELECT ingredients.Est_Disponible, ingredients.ID_Ingredient, ingredients.Ingredient_Name, ingredients.Taux_Alcool, ingredients.Viscosite, ingredients.Image_Url, ingredients.Pompe, cocktail_composition.Quantite 
+                    FROM (cocktail INNER JOIN cocktail_composition ON cocktail.Cocktail_ID = cocktail_composition.ID_Cocktail) 
+                        INNER JOIN ingredients ON ingredients.ID_Ingredient = cocktail_composition.Ingredient_ID 
+                    WHERE cocktail.Cocktail_ID=:idCocktail";
         $this->db->executeQuery($query, array(':idCocktail' => array($idCocktail, PDO::PARAM_STR)));
         $res = $this->db->getResults();
         foreach($res as $row){
