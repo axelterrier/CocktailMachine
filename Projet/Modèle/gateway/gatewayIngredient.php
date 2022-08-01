@@ -2,7 +2,7 @@
 //Objectif gateway -> Intéraction avec la BDD
 //Création des requêtes
 
-require_once('../config/connection.php');
+require_once('/var/www/html/CocktailMachine/config/connection.php');
 
 class GatewayIngredient
 {
