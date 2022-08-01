@@ -19,7 +19,7 @@ class GatewayIngredient
         $this->db->executeQuery($query);
         $res = $this->db->getResults();
         foreach($res as $row){
-            $tabN[] = new Ingredient($row['ID_Ingredient'], $row['Ingredient_Name'], $row['Viscosite'], $row['Taux_Alcool'], $row['Est_Disponible'], $row['Image_Url']);
+            $tabN[] = new Ingredient($row['ID_Ingredient'], $row['Ingredient_Name'], $row['Viscosite'], $row['Taux_Alcool'], $row['Est_Disponible'], $row['Image_Url'], $row['Pompe']);
         }
         return $tabN;
     }
@@ -31,21 +31,21 @@ class GatewayIngredient
         $res = $this->db->getResults();
         foreach($res as $row){
             $Nombre_Ingredient = $this->GetIngredient($row['Cocktail_ID']);
-            $tabN[] = new Ingredient($row['ID_Ingredient'], $row['Ingredient_Name'], $row['Viscosite'], $row['Taux_Alcool'], $row['Est_Disponible'], $row['Image_Url']);
+            $tabN[] = new Ingredient($row['ID_Ingredient'], $row['Ingredient_Name'], $row['Viscosite'], $row['Taux_Alcool'], $row['Est_Disponible'], $row['Image_Url'], $row['Pompe']);
         }
         return $tabN;
     }
 
     public function GetIngredient(int $idCocktail) {
         $tabN = array();
-        $query = "SELECT Ingredients.Est_Disponible, Ingredients.ID_Ingredient, Ingredients.Ingredient_Name, Ingredients.Taux_Alcool, Ingredients.Viscosite, Ingredients.Image_Url, Cocktail_Composition.Quantite 
+        $query = "SELECT Ingredients.Est_Disponible, Ingredients.ID_Ingredient, Ingredients.Ingredient_Name, Ingredients.Taux_Alcool, Ingredients.Viscosite, Ingredients.Image_Url, Ingredients.Pompe, Cocktail_Composition.Quantite 
                     FROM (Cocktail INNER JOIN Cocktail_Composition ON Cocktail.Cocktail_ID = Cocktail_Composition.ID_Cocktail) 
                         INNER JOIN Ingredients ON Ingredients.ID_Ingredient = Cocktail_Composition.Ingredient_ID 
                     WHERE Cocktail.Cocktail_ID=:idCocktail";
         $this->db->executeQuery($query, array(':idCocktail' => array($idCocktail, PDO::PARAM_STR)));
         $res = $this->db->getResults();
         foreach($res as $row){
-            $tabN[] = new Ingredient($row['ID_Ingredient'], $row['Ingredient_Name'], $row['Viscosite'], $row['Taux_Alcool'], $row['Est_Disponible'], $row['Image_Url']);
+            $tabN[] = new Ingredient($row['ID_Ingredient'], $row['Ingredient_Name'], $row['Viscosite'], $row['Taux_Alcool'], $row['Est_Disponible'], $row['Image_Url'], $row['Pompe']);
         }
         return $tabN;
     }
@@ -68,6 +68,14 @@ class GatewayIngredient
             $result = $row['Est_Disponible'];
         }
         return $result;
+    }
+
+    public function insertPumpNumber(int $Pompe, int $ID_Ingredient){
+        $query = "UPDATE ingredients SET Pompe=:Pompe WHERE ID_Ingredient=:ID_Ingredient";
+        $this->db->executeQuery($query,  array(':Pompe' => array($Pompe, PDO::PARAM_STR),
+                                        ':ID_Ingredient' => array($ID_Ingredient, PDO::PARAM_INT)));
+        $res = $this->db->getResults();
+        return $res;
     }
 }
 
