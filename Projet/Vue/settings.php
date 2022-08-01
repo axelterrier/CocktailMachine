@@ -1,15 +1,15 @@
 <?php
 session_start();
-require_once('/var/www/html/Projet/CocktailMachine/config/config.php');
-require_once('/var/www/html/Projet/CocktailMachine/Modele/gateway/gatewayUtilisateur.php');
+require_once('/var/www/html/CocktailMachine/config/config.php');
+require_once('/var/www/html/CocktailMachine/Modele/gateway/gatewayUtilisateur.php');
 
 if (isset($_SESSION['user'])) {
     // logged in
 } else {
     header("Location:signin.php");
 }
-require_once('/var/www/html/Projet/CocktailMachine/config/config.php');
-require_once('/var/www/html/Projet/CocktailMachine/Modele/gateway/gatewayCocktail.php');
+require_once('/var/www/html/CocktailMachine/config/config.php');
+require_once('/var/www/html/CocktailMachine/Modele/gateway/gatewayCocktail.php');
 
 $user = new gatewayUtilisateur($con);
 
@@ -28,19 +28,19 @@ $u = $user->GetInfoUtilisateur($_SESSION['user']);
 </head>
 <body>
     <a href="#">
-        <img src="/var/www/html/Projet/CocktailMachine/Vue/image/arrow.png" id="backArrow">
+        <img src="/var/www/html/CocktailMachine/Vue/image/arrow.png" id="backArrow">
     </a>
     <h1 id="title">Paramètres</h1>
     <h3 id="subTitle">Compte</h3>
 
     <div id="mainRow">
-        <img src="/var/www/html/Projet/CocktailMachine/Vue/image/user.svg" id="profilePic">
+        <img src="/var/www/html/CocktailMachine/Vue/image/user.svg" id="profilePic">
         <div id="info">
             <h4 id="name"><?php echo $u->Utilisateur_ID; ?></h4>
             <p id="moreInfo">Informations personnelles</p>
         </div>
         <a id="imgBackground" href="profile.php">
-            <img src="/var/www/html/Projet/CocktailMachine/Vue/image/arrow.png" id="detailArrow">
+            <img src="/var/www/html/CocktailMachine/Vue/image/arrow.png" id="detailArrow">
         </a>
     </div>
 
@@ -53,17 +53,17 @@ $u = $user->GetInfoUtilisateur($_SESSION['user']);
     </div>
     <div class="row">
         <div class="parameterIconBackground">
-            <img src="/var/www/html/Projet/CocktailMachine/Vue/image/language.svg" alt="" class="rowIcon">
+            <img src="/var/www/html/CocktailMachine/Vue/image/language.svg" alt="" class="rowIcon">
         </div>
         <h4 class="parameterName">Language</h4>
         <p class="value">English</p>
         <div id="imgBackground">
-            <img src="/var/www/html/Projet/CocktailMachine/Vue/image/arrow.png" id="detailArrow">
+            <img src="/var/www/html/CocktailMachine/Vue/image/arrow.png" id="detailArrow">
         </div>
     </div>
     <div class="rowSlider">
         <div class="parameterIconBackground">
-            <img src="/var/www/html/Projet/CocktailMachine/Vue/image/theme.svg" alt="" class="rowIcon">
+            <img src="/var/www/html/CocktailMachine/Vue/image/theme.svg" alt="" class="rowIcon">
         </div>        
         <h4 class="parameterName">Dark Mode</h4>
         <p class="value" id="valueDarkMode"></p>
@@ -74,23 +74,23 @@ $u = $user->GetInfoUtilisateur($_SESSION['user']);
     </div>
     <div class="rowWithoutValue">
         <div class="parameterIconBackground">
-            <img src="/var/www/html/Projet/CocktailMachine/Vue/image/theme.svg" alt="" class="rowIcon">
+            <img src="/var/www/html/CocktailMachine/Vue/image/theme.svg" alt="" class="rowIcon">
         </div>  
         <h4 class="parameterName">Notifications</h4>
         <p class="invisibleValue">off</p>   
         <div id="imgBackground">
-            <img src="/var/www/html/Projet/CocktailMachine/Vue/image/arrow.png" id="detailArrow">
+            <img src="/var/www/html/CocktailMachine/Vue/image/arrow.png" id="detailArrow">
         </div>
     </div>
 
     <div class="rowWithoutValue">
         <div class="parameterIconBackground">
-            <img src="/var/www/html/Projet/CocktailMachine/Vue/image/theme.svg" alt="" class="rowIcon">
+            <img src="/var/www/html/CocktailMachine/Vue/image/theme.svg" alt="" class="rowIcon">
         </div>  
         <h4 class="parameterName">Aide</h4>
         <p class="invisibleValue">off</p>
         <div id="imgBackground">
-            <img src="/var/www/html/Projet/CocktailMachine/Vue/image/arrow.png" id="detailArrow">
+            <img src="/var/www/html/CocktailMachine/Vue/image/arrow.png" id="detailArrow">
         </div>
     </div>
 </body>

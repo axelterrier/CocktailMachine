@@ -8,9 +8,9 @@ if (isset($_SESSION['user'])) {
     header("Location:signin.php");
 }
 
-require_once('/var/www/html/Projet/CocktailMachine/config/config.php');
-require_once('/var/www/html/Projet/Modele/gateway/gatewayIngredient.php');
-require_once('/var/www/html/Projet/Modele/gateway/gatewayCocktail.php');
+require_once('/var/www/html/CocktailMachine/config/config.php');
+require_once('/var/www/html/Modele/gateway/gatewayIngredient.php');
+require_once('/var/www/html/Modele/gateway/gatewayCocktail.php');
 
 $ingr = new GatewayIngredient($con);
 $test2 = new GatewayIngredient($con);

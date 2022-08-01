@@ -3,9 +3,9 @@
 session_start();
 
 
-require_once('/var/www/html/Projet/CocktailMachine/config/config.php');
-require_once('/var/www/html/Projet/CocktailMachine/Modele/gateway/GatewayIngredient.php');
-require_once('/var/www/html/Projet/CocktailMachine/Modele/gateway/GatewayCocktail.php');
+require_once('/var/www/html/CocktailMachine/config/config.php');
+require_once('/var/www/html/CocktailMachine/Modele/gateway/GatewayIngredient.php');
+require_once('/var/www/html/CocktailMachine/Modele/gateway/GatewayCocktail.php');
 
 $ingr = new GatewayIngredient($con);
 

@@ -7,9 +7,9 @@ if (isset($_SESSION['user'])) {
 } else {
     header("Location:signin.php");
 }
-require_once('/var/www/html/Projet/CocktailMachine/config/config.php');
-require_once('/var/www/html/Projet/CocktailMachine/Modele/gateway/gatewayCocktail.php');
-require_once('/var/www/html/Projet/CocktailMachine/Modele/gateway/gatewayIngredient.php');
+require_once('/var/www/html/CocktailMachine/config/config.php');
+require_once('/var/www/html/CocktailMachine/Modele/gateway/gatewayCocktail.php');
+require_once('/var/www/html/CocktailMachine/Modele/gateway/gatewayIngredient.php');
 
 
 
@@ -47,7 +47,7 @@ $u = $test->GetAvailableCocktail();
                 <h4 class="cocktailInfo">Infos random sur le cocktail</h4>
             </div>
             <div class="arrowContainer">
-                <img src="/var/www/html/Projet/CocktailMachine/Vue/image/arrow.svg" alt="" class="arrow">
+                <img src="/var/www/html/CocktailMachine/Vue/image/arrow.svg" alt="" class="arrow">
             </div>
         </div>
         </a>

@@ -7,9 +7,9 @@ if (isset($_SESSION['user'])) {
 } else {
     header("Location:signin.php");
 }
-require_once('/var/www/html/Projet/CocktailMachine/config/config.php');
-require_once('/var/www/html/Projet/CocktailMachine/Modele/gateway/gatewayIngredient.php');
-require_once('/var/www/html/Projet/CocktailMachine/Modele/gateway/gatewayCocktail.php');
+require_once('/var/www/html/CocktailMachine/config/config.php');
+require_once('/var/www/html/CocktailMachine/Modele/gateway/gatewayIngredient.php');
+require_once('/var/www/html/CocktailMachine/Modele/gateway/gatewayCocktail.php');
 
 
 
@@ -50,11 +50,11 @@ $u = $test->GetAvailableCocktail();
         </div>
         <div class="searchBarContainer">
             <div class="searchBar">
-                <img src="/var/www/html/Projet/Vue/image/search.png" alt="" class="iconSearchBar">
+                <img src="/var/www/html/Vue/image/search.png" alt="" class="iconSearchBar">
                 <input class="inputSearch" type="text" placeholder="cocktail name">
             </div>
             <div class="button">
-                <img src="/var/www/html/Projet/Vue/image/qr.png" alt="" class="buttonImage">
+                <img src="/var/www/html/Vue/image/qr.png" alt="" class="buttonImage">
             </div>
         </div>
         <div class="filters">
@@ -76,7 +76,7 @@ $u = $test->GetAvailableCocktail();
              
             <div class="filter">
                 <div class="filterFlex">
-                    <img src="/var/www/html/Projet/Vue/image/filter.png" alt="" class="filterImage">
+                    <img src="/var/www/html/Vue/image/filter.png" alt="" class="filterImage">
                     <p class="filterName">filterName</p>
                 </div>
             </div>           
@@ -95,7 +95,7 @@ $u = $test->GetAvailableCocktail();
                     </div>
                     <h4 class="cocktailName"><?php echo $cocktail->Nom_Cocktail; ?></h4>
                         <div class="gradeContainer">
-                            <img src="/var/www/html/Projet/Vue/image/star.png" alt="" class="star">
+                            <img src="/var/www/html/Vue/image/star.png" alt="" class="star">
                             <p class="grade"><?php echo $cocktail->Cocktail_ID; ?></p>
                         </div>
                     </div>
@@ -109,15 +109,15 @@ $u = $test->GetAvailableCocktail();
    
     <div class="footer">
         <div class="navItem">
-            <img src="/var/www/html/Projet/Vue/image/compass.png" alt="" class="iconNav">
+            <img src="/var/www/html/Vue/image/compass.png" alt="" class="iconNav">
             <p class="navText">Discover</p>
         </div>
         <div class="navItem">
-            <img src="/var/www/html/Projet/Vue/image/shopping.png"" class="iconNav">
+            <img src="/var/www/html/Vue/image/shopping.png"" class="iconNav">
             <p class="navText">Ingrédients</p>
         </div>
         <div class="navItem">
-            <img src="/var/www/html/Projet/Vue/image/user.png" alt="" class="iconNav">
+            <img src="/var/www/html/Vue/image/user.png" alt="" class="iconNav">
             <p class="navText">Profil</p>
         </div>
     </div>
