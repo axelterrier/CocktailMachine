@@ -31,7 +31,6 @@ $u = $ingr->GetAllIngredients();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300&display=swap" rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="ingredientSelection.css">
     <title>Sélection des ingrédients</title>
 </head>
@@ -192,7 +191,9 @@ $u = $ingr->GetAllIngredients();
                                     break
                                 }
                             }
+                            console.log(sliderChecked)
                         }
+                        console.log("after for " + sliderChecked)
                         if (sliderChecked > 10) {
                             document.getElementById(ID).checked = false
                             sliderChecked = 10
@@ -223,20 +224,6 @@ $u = $ingr->GetAllIngredients();
                     //Stocker dans un cookie un JSON contenant pumpNumber
                     var Json = JSON.stringify(pumpNumber);
                     setCookie("Pompe", Json, 1)
-
-                    $.ajax({
-
-                        url : 'insertIntoDB.php',
-                        type : 'POST',
-                        success : function (result) {
-                        console.log ('success'); // Here, you need to use response by PHP file.
-                        },
-                        error : function () {
-                        console.log ('error');
-                        }
-
-                    });
-
                 }
 
                 function setCookie(cname, cvalue, exdays) {
@@ -245,10 +232,8 @@ $u = $ingr->GetAllIngredients();
                     let expires = "expires="+ d.toUTCString();
                     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
                 }
-                               
-               
-
             </script>
+
 
         <?php
         }

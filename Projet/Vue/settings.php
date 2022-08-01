@@ -27,7 +27,7 @@ $u = $user->GetInfoUtilisateur($_SESSION['user']);
     <title>Paramètres</title>
 </head>
 <body>
-    <a href="cocktailPage.php">
+    <a href="#">
         <img src="image/arrow.png" id="backArrow">
     </a>
     <h1 id="title">Paramètres</h1>

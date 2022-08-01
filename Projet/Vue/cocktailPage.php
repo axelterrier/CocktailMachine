@@ -108,24 +108,18 @@ $u = $test->GetAvailableCocktail();
     </div>
    
     <div class="footer">
-        <a href="#" class="navItemLink">
         <div class="navItem">
             <img src="/projet/vue/image/compass.png" alt="" class="iconNav">
             <p class="navText">Discover</p>
         </div>
-        </a>
-        <a href="ingredientSelection.php" class="navItemLink">
-            <div class="navItem">
-                <img src="/projet/vue/image/shopping.png"" class="iconNav">
-                <p class="navText">Ingrédients</p>
-            </div>
-        </a>
-        <a href="settings.php" class="navItemLink">
+        <div class="navItem">
+            <img src="/projet/vue/image/shopping.png"" class="iconNav">
+            <p class="navText">Ingrédients</p>
+        </div>
         <div class="navItem">
             <img src="/projet/vue/image/user.png" alt="" class="iconNav">
             <p class="navText">Profil</p>
         </div>
-        </a>
     </div>
 
 </body>
