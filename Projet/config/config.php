@@ -1,8 +1,8 @@
 <?php
 require_once("connection.php");
-require_once("/var/www/html/CocktailMachine/Modele/cocktail.php");
-require_once("/var/www/html/CocktailMachine/Modele/ingredient.php");
-require_once("/var/www/html/CocktailMachine/Modele/utilisateur.php");
+require_once("../Modèle/cocktail.php");
+require_once ("../Modèle/ingredient.php");
+require_once ("../Modèle/utilisateur.php");
 // liste des modules a inclure
 $dConfig['includes']=array('Validation.php');
 
