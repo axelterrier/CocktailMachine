@@ -1,0 +1,216 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    background-color: rgb(250, 244, 236);
+}
+
+.mainView{
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.upperRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 25%;
+}
+
+.backArrow{
+    height: 20px;
+    width: 20px;
+    transform: rotate(180deg);
+}
+
+.nomCocktail{
+    width: 60%;
+    word-wrap: break-word;
+}
+
+.favorite{
+    height: 30px;
+    width: 30px;
+}
+
+button.favoriteButton{
+    height: 30px;
+    width: 30px;
+    border: none;
+    outline: none ;
+    background-color: transparent ;
+}
+
+.middleRow{
+    height: 50%;
+    width: 100%;
+    background: url(/image/cocktailImage.png);
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.lowerRow{
+    display: flex;
+    flex: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 25%;
+    width: 100%;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+}
+
+.detailIcon{
+    height: 40px;
+    width: 40px;
+}
+
+.valueDetail{
+    font-weight: 900;
+}
+
+.ingredientView{
+    height: 40%;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.Title{
+    margin-left: 20px;
+}
+
+.cardSlider{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+}
+
+.cardSlider::-webkit-scrollbar{
+    display: none;
+}
+
+.card{
+    height: 250px;
+    width: 150px;
+    display: inline-block;
+    margin-top: 20px;  
+    margin-left: 10px; 
+    margin-right: 10px; 
+}
+
+.cardFlex{
+    height: 100%;
+    width: 100%;
+}
+
+.imageContainer{
+    border-radius: 25px;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+}
+
+.imageIngredient{
+    height: 90%;
+    width: auto;
+    max-width: 100%;
+    object-fit: scale-down;
+}
+
+.IngredientName{
+    display: inline-block;
+    word-wrap: break-word;
+}
+.IngredientName,
+.quantity{
+    word-wrap: break-word;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 50px;
+    width: 80%;
+}
+
+.quantity{
+    font-weight: lighter;
+}
+
+.footer{
+    margin-top: -20px;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.checkIngredient{
+    height: 100%;
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ingredient{
+    height: 30px;
+    width: 30px;
+}
+
+.btn{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e0ca3b;
+    border-radius: 50px;
+}
+
+.serveCTA{
+    margin-left: 10px;
+    color: white;
+}
+
+.arrowContainer{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.arrowCTA{
+    height: 20px;
+    width: 20px;
+}
