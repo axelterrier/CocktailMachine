@@ -2,7 +2,7 @@
 //Objectif gateway -> Intéraction avec la BDD
 //Création des requêtes
 
-require_once('/var/www/html/CocktailMachine/config/connection.php');
+require_once('../config/connection.php');
 
 class GatewayCocktail
 {
@@ -15,7 +15,7 @@ class GatewayCocktail
 
     public function GetAvailableCocktail() {
         $tabN = array();
-        $query = "SELECT * FROM cocktail WHERE Est_Disponible = TRUE";
+        $query = "SELECT * FROM Cocktail WHERE Est_Disponible = TRUE";
         $this->db->executeQuery($query);
         $res = $this->db->getResults();
         foreach($res as $row){
@@ -26,7 +26,7 @@ class GatewayCocktail
     }
 
     public function GetIngredientNumberPerCocktail(int $idCocktail){
-        $query = "SELECT COUNT(*) FROM cocktail_composition WHERE cocktail_composition.ID_Cocktail=:idCocktail";
+        $query = "SELECT COUNT(*) FROM Cocktail_Composition WHERE Cocktail_Composition.ID_Cocktail=:idCocktail";
         $this->db->executeQuery($query, array(':idCocktail' => array($idCocktail, PDO::PARAM_STR)));
         $res = $this->db->getResults();
         $result = array();
@@ -38,7 +38,7 @@ class GatewayCocktail
     }
 
     public function GetInfoCocktail(int $idCocktail){
-        $query = "SELECT * FROM cocktail WHERE Cocktail_ID=:idCocktail";
+        $query = "SELECT * FROM Cocktail WHERE Cocktail_ID=:idCocktail";
         $this->db->executeQuery($query, array(':idCocktail' => array($idCocktail, PDO::PARAM_STR)));
         $res = $this->db->getResults();
         
