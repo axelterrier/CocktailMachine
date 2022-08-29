@@ -1,0 +1,10 @@
+:root{
+    /* LOGIN */
+    --login-background: rgb(255, 255, 255);
+    --login-text: black;
+    --login-placeholder: black;
+    --login-input-background: white;
+    --login-input-border: lightgray;
+    --login-button-background: blue;
+    --login-button-text: white;
+}

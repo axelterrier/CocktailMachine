@@ -1,0 +1,10 @@
+:root{
+    /* LOGIN */
+    --login-background: black;
+    --login-text: white;
+    --login-placeholder: white;
+    --login-input-background: black;
+    --login-input-border: lightgray;
+    --login-button-background: yellow;
+    --login-button-text: black;
+}

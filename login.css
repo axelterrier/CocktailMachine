@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    font-size: 14px;
+    height: 100%;
+  }
+
+html{
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: var(--login-background);
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* Enlever les rectangles bleus au clic */
+}
+
+.titleContainer{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    color: var(--login-text);
+}
+
+.rowTitle{
+    color: var(--login-text);
+    height: 5%;
+    width: auto;
+    margin-left: 40px;
+    margin-top: 40px;
+    font-weight: 500;
+}
+
+.row{
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icon{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: var(--login-text) !important;
+    fill: var(--login-text) !important;
+}
+
+
+.input{
+    width: 70%;
+    outline: none;
+    border: 0;
+    background-color: var(--login-input-background);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--login-input-border);
+}
+
+input::placeholder{
+    text-align: left;
+    font-weight: lighter;
+}
+
+.buttonContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formButton{
+    margin-top: 20px;
+    width: 80%;
+    height: 40px;
+    background-color: var(--login-button-background);
+    color: var(--login-button-text);
+    border-radius: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.links{
+    height: 50px;
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    margin-top: 100px;
+}
+
+.link{
+    width: 100%;
+    text-decoration: none;
+    color: var(--login-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; 
+    outline: none;
+}
+
