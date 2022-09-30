@@ -30,20 +30,10 @@ html{
     color: var(--login-text);
 }
 
-.rowTitle{
-    color: var(--login-text);
-    height: 5%;
-    width: auto;
-    margin-left: 20px;
-    margin-top: 40px;
-    font-weight: 500;
-    opacity: 0;
-}
-
 .row{
     width: 100%;
-    height: 50px;
-    margin-top: 10px;
+    height: 5%;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -76,6 +66,7 @@ input::placeholder{
 }
 
 .buttonContainer{
+    height: 10%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -95,10 +86,8 @@ input::placeholder{
 }
 
 .links{
-    height: 50px;
+    height: 10%;
     width: 100%;
-    position: relative;
-    bottom: 0px;
     margin-top: 100px;
 }
 
@@ -112,4 +101,3 @@ input::placeholder{
     margin-top: 20px; 
     outline: none;
 }
-

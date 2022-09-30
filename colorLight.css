@@ -1,10 +1,25 @@
 :root{
-    /* LOGIN */
+    /* LOGIN AND REGISTER*/
     --login-background: rgb(255, 255, 255);
-    --login-text: black;
-    --login-placeholder: black;
+    --login-text: #191414;
+    --login-placeholder: #191414;
     --login-input-background: white;
-    --login-input-border: lightgray;
-    --login-button-background: blue;
+    --login-input-border: #1db954;
+    --login-button-background: #1ed760;
     --login-button-text: white;
-}
+
+    /*HOME PAGE*/
+    --homepage-background: white;
+    --homepage-text-color: black;
+    --homepage-username: #1ed760;
+    --homepage-card: lightgray;
+    --homepage-text-card-color: black;
+    --homepage-searchbar: lightgray;
+    --homepage-filter: lightgray;
+    --homepage-filter-color: black;
+    --homepage-active-filter: #1ed760;
+    --homepage-text-active-filter: white;
+    --homepage-footer-background: lightgray;
+    --homepage-footer-svg: black;
+    --homepage-active-icon: #1db954;
+}   
