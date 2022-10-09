@@ -29,4 +29,12 @@
     --theme-color: black;
     --theme-individual-background: lightgray;
     --theme-themetitle: white;
+
+    /*SETTINGS*/
+    --settings-background: white;
+    --settings-color: black;
+    --settings-backarrow: #1ed760;
+    --settings-parameterCard: #f1eded;
+    --settings-arrow: #1db954;
+    --settings-icon: black;
 }
