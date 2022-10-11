@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="theme/colorDark.css">
     <link rel="stylesheet" href="settings.css">
+    <script src="theme.js"></script>
     <title>Paramètres</title>
 </head>
-<body>
-    <div class="backRow">
+<body onload="loadThemCSSFile(getStorage())">
+    <a href="homePage.html"><div class="backRow">
         <svg class="backButton" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="400.004px" height="400.004px" viewBox="0 0 400.004 400.004" style="enable-background:new 0 0 400.004 400.004;"
 	 xml:space="preserve">
@@ -50,7 +51,7 @@
 <g>
 </g>
         </svg>
-    </div>
+    </div></a>
     <div class="titleContainer">
         <h1 class="title">Paramètres</h1>
     </div>
@@ -109,7 +110,7 @@ C395.636,249.822,393.185,243.902,388.819,239.537z"/>
         <h3 class="title">Paramètres</h3>
     </div>
     <div class="rowContainer">
-        <div class="row">
+        <a href="theme.html" class="row">
             <div class="iconParameterContainer">
                 <svg class="iconParameter" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -206,10 +207,10 @@ C395.636,249.822,393.185,243.902,388.819,239.537z"/>
 </g>
                 </svg>
             </div>
-        </div>
+        </a>
     </div>
     <div class="rowContainer">
-        <div class="row">
+        <a href="#" class="row">
             <div class="iconParameterContainer">
                 <svg class="iconParameter"  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 459.334 459.334" style="enable-background:new 0 0 459.334 459.334;" xml:space="preserve">
@@ -297,14 +298,14 @@ C395.636,249.822,393.185,243.902,388.819,239.537z"/>
 </g>
                 </svg>
             </div>
-        </div>
+        </a>
     </div>
     <div class="rowContainer">
-        <div class="row">
+        <a href="#" class="row">
             <div class="iconParameterContainer">
                 <svg class="iconParameter" width="512px" height="512px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="var(--ci-primary-color, currentColor)" d="M230.2,356.821l14.425-30.654a573.693,573.693,0,0,1-40.421-44.777q15.881-21.418,29.594-43.958A543.369,543.369,0,0,0,292.212,104H344V72H200V16H168V72H16v32H75.77a545.123,545.123,0,0,0,71.448,153.959c6.811-8.406,13.706-17.432,20.566-27.031A512.677,512.677,0,0,1,109.13,104H258.867c-29.727,97.53-84.546,169.208-126.64,213.119-48.993,51.107-91.952,76.86-92.38,77.114l1.621,2.738L48,408l8.14,13.774c1.873-1.106,46.474-27.729,98.389-81.68q15.38-15.982,29.44-32.931A608.138,608.138,0,0,0,230.2,356.821Z" class="ci-primary"/>
-                    <path fill="var(--ci-primary-color, currentColor)" d="M333.722,200,328,212.516,209.379,472h35.185l36.571-80h141.73l36.571,80h35.185L370.278,200ZM328,360H295.764L328,289.484l24-52.5L408.236,360Z" class="ci-primary"/>
+                    <path  d="M230.2,356.821l14.425-30.654a573.693,573.693,0,0,1-40.421-44.777q15.881-21.418,29.594-43.958A543.369,543.369,0,0,0,292.212,104H344V72H200V16H168V72H16v32H75.77a545.123,545.123,0,0,0,71.448,153.959c6.811-8.406,13.706-17.432,20.566-27.031A512.677,512.677,0,0,1,109.13,104H258.867c-29.727,97.53-84.546,169.208-126.64,213.119-48.993,51.107-91.952,76.86-92.38,77.114l1.621,2.738L48,408l8.14,13.774c1.873-1.106,46.474-27.729,98.389-81.68q15.38-15.982,29.44-32.931A608.138,608.138,0,0,0,230.2,356.821Z" class="ci-primary"/>
+                    <path  d="M333.722,200,328,212.516,209.379,472h35.185l36.571-80h141.73l36.571,80h35.185L370.278,200ZM328,360H295.764L328,289.484l24-52.5L408.236,360Z" class="ci-primary"/>
                 </svg>
             </div>
             <div class="parameterName"><h3>Langage</h3></div>
@@ -347,10 +348,10 @@ C395.636,249.822,393.185,243.902,388.819,239.537z"/>
 </g>
                 </svg>
             </div>
-        </div>
+        </a>
     </div>
     <div class="rowContainer">
-        <div class="row">
+        <a href="#" class="row">
             <div class="iconParameterContainer">
                 <svg class="iconParameter" width="1024px" height="1024px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
                   <path d="M348 676.1C250 619.4 184 513.4 184 392c0-181.1 146.9-328 328-328s328 146.9 328 328c0 121.4-66 227.4-164 284.1V792c0 17.7-14.3 32-32 32H380c-17.7 0-32-14.3-32-32V676.1zM392 888h240c4.4 0 8 3.6 8 8v32c0 17.7-14.3 32-32 32H416c-17.7 0-32-14.3-32-32v-32c0-4.4 3.6-8 8-8z"/>
@@ -397,7 +398,7 @@ C395.636,249.822,393.185,243.902,388.819,239.537z"/>
 </g>
                 </svg>
             </div>
-        </div>
+        </a>
     </div>
 
 </body>
