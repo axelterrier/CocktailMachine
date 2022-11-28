@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/theme.js"></script>
-    <script src="/ingredient.js"></script>
+    <script src="/ingredient.js" defer></script>
     <link rel="stylesheet" href="ingredient.css">
     <title>Ingrédients</title>
 </head>
-<body onload="loadThemCSSFile(getStorage())">
+<body onload="loadThemCSSFile(getStorage()), countCheckBox()">
     <a href="homePage.html"><div class="backRow">
         <svg class="backButton" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="400.004px" height="400.004px" viewBox="0 0 400.004 400.004" style="enable-background:new 0 0 400.004 400.004;"
@@ -142,7 +142,7 @@
         </div>
         
     </div>
-    <a href="recapIngredient.html"><div class="count">
+    <a href="recapIngredient.html"><div class="count" id="count">
         <h4 class="countInfo" id="countInfo">Choisissez jusqu'à 10 ingrédients</h4>
     </div></a>
 </body>

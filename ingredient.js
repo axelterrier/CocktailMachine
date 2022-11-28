@@ -1,7 +1,8 @@
 
 function countCheckBox() {
+    
+    
     var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-    console.log(checkboxes.length)
     if(checkboxes.length == 0){
         document.getElementById("countInfo").innerHTML = "Choisissez jusqu'à 10 ingrédients";
     }else if(checkboxes.length == 1){
@@ -14,5 +15,22 @@ function countCheckBox() {
         }
     }else{
         document.getElementById("countInfo").innerHTML = "problème";
+         //C'est les problèmes la
+    }
+    updateButtonBackground(checkboxes.length)
+}
+
+function updateButtonBackground(checkbox){
+    console.log(checkbox)
+    var button = document.getElementById('count');
+    const styles = getComputedStyle(document.documentElement);
+    const buttonClickable = styles.getPropertyValue('--ingredient-button-clickable').trim();
+    const buttonNonClickable = styles.getPropertyValue('--ingredient-button-non-clickable').trim();
+    if(checkbox == 0){
+        button.style.backgroundColor = buttonNonClickable
+    }else if(checkbox > 0){
+        button.style.backgroundColor = buttonClickable
+    }else if(checkbox == null){
+        button.style.backgroundColor = buttonNonClickable
     }
 }

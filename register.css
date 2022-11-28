@@ -19,7 +19,7 @@ html{
 }
 
 a, a:hover, a:visited, a:active {
-    color: var(--homepage-text-color);
+    color: var(--login-text);
     text-decoration: none;
 }
 

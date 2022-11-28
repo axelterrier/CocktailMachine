@@ -7,6 +7,7 @@
     --login-input-border: #1ed760;
     --login-button-background: #1db954;
     --login-button-text: rgb(218, 218, 218);
+    --login-border-element: 50px;
 
     /*HOME PAGE*/
     --homepage-background: black;
@@ -37,4 +38,8 @@
     --settings-parameterCard: #241f1f;
     --settings-arrow: #1db954;
     --settings-icon: white;
+
+    /* INGREDIENTS */
+    --ingredient-button-clickable: green;
+    --ingredient-button-non-clickable: red;
 }

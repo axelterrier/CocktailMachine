@@ -1,0 +1,63 @@
+:root{
+    /* LOGIN AND REGISTER*/
+    --login-background: #1b1b1b;
+    --login-text: #ffffff;
+    --login-placeholder: #ffffff;
+    --login-input-background: transparent;
+    --login-input-border: #ffa31a;
+    --login-button-background: #ffa31a;
+    --login-button-text: white;
+    --login-border-element: 50px;
+
+    /*HOME PAGE*/
+    --homepage-background: #1b1b1b;
+    --homepage-text-color: white;
+    --homepage-username: #ffa31a;
+    --homepage-card: #292929;
+    --homepage-text-card-color: black;
+    --homepage-searchbar: #292929;
+    --homepage-filter: #292929;
+    --homepage-filter-color: white;
+    --homepage-active-filter: #ffa31a;
+    --homepage-text-active-filter: white;
+    --homepage-footer-background: #343333;
+    --homepage-footer-svg: black;
+    --homepage-active-icon: #ffa31a;
+
+    /*THEME*/
+    --theme-backarrow: #ffa31a;
+    --theme-background: #292929;
+    --theme-color: white;
+    --theme-individual-background: #343333;
+    --theme-themetitle: white;
+
+    /*SETTINGS*/
+    --settings-background: #1b1b1b;
+    --settings-color: white;
+    --settings-backarrow: #ffa31a;
+    --settings-parameterCard: #292929;
+    --settings-arrow: #ffa31a;
+    --settings-icon: #ffa31a;
+
+    /*INGREDIENTS*/
+    --ingredient-background: #1b1b1b;
+    --ingredient-color: white;
+    --ingredient-separator: #ffa31a;
+    --ingredient-button-non-clickable: #292929;
+    --ingredient-button-clickable: #ffa31a;
+    --ingredient-back-arrow: #ffa31a;
+
+    /*RECAP INGREDIENT*/
+    --recap-background: #1b1b1b;
+    --recap-color: white;
+    --recap-back-arrow: #ffa31a;
+    --recap-card-background: #292929;
+
+    /*RECIPE*/
+    --recipe-background: black;
+    --recipe-color: white;
+    --recipe-backarrow: #ffa31a;
+    --recipe-container-background: #292929;
+    --recipe-button-background: #ffa31a;
+    --recipe-button-color: white;
+}

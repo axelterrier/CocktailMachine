@@ -14,12 +14,13 @@ html{
     height: 100%;
     max-width: 100%;
     overflow-x: hidden;
-    background-color: white;
+    background-color: var(--ingredient-background);
+    color: var(--ingredient-color);
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* Enlever les rectangles bleus au clic */
 }
 
 a, a:hover, a:visited, a:active {
-    color: var(--homepage-text-color);
+    color: var(--ingredient-color);
     text-decoration: none;
 }
 
@@ -34,7 +35,7 @@ a, a:hover, a:visited, a:active {
     margin: 20px;
     height: 30px;
     width: 30px;
-    fill: black;
+    fill: var(--ingredient-back-arrow);
 }
 
 .titleContainer{
@@ -58,7 +59,7 @@ a, a:hover, a:visited, a:active {
 .ingredient{
     width: 90%;
     min-height: 70px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--ingredient-separator);
     padding-bottom: 5px;
     display: flex;
     flex-direction: row;
@@ -83,7 +84,7 @@ a, a:hover, a:visited, a:active {
     position: fixed;
     width: 90%;
     aspect-ratio: 6/1;
-    background-color: red;
+    background-color: var(--ingredient-button-non-clickable);
     border-radius: 50px;
     bottom: 20px;
     margin-left: 5%;

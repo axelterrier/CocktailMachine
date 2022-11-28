@@ -14,7 +14,8 @@ html{
     height: 100%;
     max-width: 100%;
     overflow-x: hidden;
-    background-color: white;
+    background-color: var(--recap-background);
+    color: var(--recap-color);
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* Enlever les rectangles bleus au clic */
 }
 
@@ -34,7 +35,7 @@ a, a:hover, a:visited, a:active {
     margin: 20px;
     height: 30px;
     width: 30px;
-    fill: black;
+    fill: var(--recap-back-arrow);
 }
 
 .titleContainer{
@@ -59,8 +60,8 @@ a, a:hover, a:visited, a:active {
     width: 95%;
     min-height: 80px;
     border-radius: 15px;
-    border: 2px solid blue;
     display: flex;
+    background-color: var(--recap-card-background);
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
@@ -84,4 +85,8 @@ a, a:hover, a:visited, a:active {
 
 .info h4, p{
     margin: 5px;
+}
+
+.pump{
+    margin-right: 5px;
 }

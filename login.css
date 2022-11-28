@@ -19,7 +19,7 @@ html{
 }
 
 a, a:hover, a:visited, a:active {
-    color: var(--homepage-text-color);
+    color: var(--login-text);
     text-decoration: none;
 }
 
@@ -73,6 +73,8 @@ a, a:hover, a:visited, a:active {
     padding-bottom: 10px;
     border-bottom: 2px solid var(--login-input-border);
     color: var(--login-text);
+    border-radius: var(--login-border-radius);
+    box-shadow: var(--login-box-shadow);
 }
 
 input::placeholder{
@@ -93,7 +95,7 @@ input::placeholder{
     height: 40px;
     background-color: var(--login-button-background);
     color: var(--login-button-text);
-    border-radius: 50px;
+    border-radius: var(--login-border-element);
     margin-left: 0px;
     margin-right: 0px;
     font-weight: 900;
@@ -116,5 +118,9 @@ input::placeholder{
     justify-content: center;
     margin-top: 20px; 
     outline: none;
+}
+
+.link:visited{
+    text-decoration: none;
 }
 
