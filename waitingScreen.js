@@ -1,6 +1,4 @@
-
-
-function test(){
+function overflow(){
     var docWidth = document.documentElement.offsetWidth;
 
     [].forEach.call(
@@ -13,8 +11,6 @@ function test(){
     );
 }
 
-console.log("test")
-
 
 function hideCircles(){
     circles = document.getElementsByClassName("circles")
@@ -26,8 +22,9 @@ function hideCircles(){
 function hidePacman(){
     pacman = document.getElementsByClassName("pacman")
     pacman[0].style.transition = "all 1s"
-    pacman[0].style.transform = "translateX(30vw)"
+    pacman[0].style.transform = "translateX(30vw) rotate(360deg)"
 }
 
 
 setTimeout(hideCircles, 5000)
+//Appeler HideCircles dès que le verre est prêt à servir

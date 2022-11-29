@@ -165,11 +165,15 @@ html{
     width: 90%;
     aspect-ratio: 6/1;
     background-color: var(--recipe-button-background);
-    color: var(--recipe-button-color);
+    
     border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.validationButton a{
+    color: var(--recipe-button-color) !important;
 }
 
 .slider{

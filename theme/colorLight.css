@@ -13,14 +13,14 @@
     --homepage-background: white;
     --homepage-text-color: black;
     --homepage-username: #1ed760;
-    --homepage-card: lightgray;
+    --homepage-card: rgb(241, 236, 236);
     --homepage-text-card-color: black;
     --homepage-searchbar: lightgray;
     --homepage-filter: lightgray;
     --homepage-filter-color: black;
     --homepage-active-filter: #1ed760;
     --homepage-text-active-filter: white;
-    --homepage-footer-background: lightgray;
+    --homepage-footer-background: rgb(223, 221, 221);
     --homepage-footer-svg: black;
     --homepage-active-icon: #1db954;
 
@@ -35,9 +35,9 @@
     --settings-background: white;
     --settings-color: black;
     --settings-backarrow: #1ed760;
-    --settings-parameterCard: #f1eded;
+    --settings-parameterCard: rgb(223, 221, 221);
     --settings-arrow: #1db954;
-    --settings-icon: black;
+    --settings-icon: rgb(40, 36, 36);
 
     /*INGREDIENTS*/
     --ingredient-button-clickable: green;
@@ -51,16 +51,18 @@
 
     /*RECIPE*/
     --recipe-background: 1b1b1b;
-    --recipe-color: white;
-    --recipe-backarrow: #ffa31a;
-    --recipe-container-background: black;
-    --recipe-button-background: #ffa31a;
+    --recipe-color: black;
+    --recipe-backarrow: #1ed760;
+    --recipe-container-background: rgb(223, 221, 221);
+    --recipe-button-background: #1ed760;
     --recipe-button-color: white;
 
     /*WAITING*/
-    --waiting-background: #1b1b1b;
-    --waiting-color: white;
-    --waiting-nom-cocktail: #ffa31a;
-    --waiting-dot: white;
-    --waiting-beer: #ffa31a;
+    --waiting-background: white;
+    --waiting-color: black;
+    --waiting-nom-cocktail: #1ed760;
+    --waiting-dot: #165f2f;
+    --waiting-beer: #165f2f;
+    --waiting-pacman: #1ed760;
+    --waiting-pacman-eye: #165f2f;
 }

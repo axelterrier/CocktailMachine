@@ -163,7 +163,7 @@ a:active {
 
 .circles span.twenty {
     right: -560px;
-    background-color: #1B1B1B;
+    background-color: var(--waiting-background);
     border-radius: 0px;
     display: flex;
     align-items: center;
@@ -252,7 +252,7 @@ a:active {
     height: 7px;
     width: 7px;
     border-radius: 7px;
-    background-color: #1C163A
+    background-color: var(--waiting-pacman-eye)
 }
 
 .pacman span {
@@ -269,7 +269,7 @@ a:active {
     left: 0;
     height: 30px;
     width: 60px;
-    background-color: #FFFB16
+    background-color: var(--waiting-pacman)
 }
 
 .pacman .top::before {

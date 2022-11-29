@@ -20,7 +20,7 @@
     --homepage-filter-color: black;
     --homepage-active-filter: #1db954;
     --homepage-text-active-filter: white;
-    --homepage-footer-background: #191414;
+    --homepage-footer-background: #151111;
     --homepage-footer-svg: white;
     --homepage-active-icon: #1db954;
     
@@ -54,7 +54,7 @@
     --recap-card-background: #292929;
 
     /*RECIPE*/
-    --recipe-background: 1b1b1b;
+    --recipe-background: #1b1b1b;
     --recipe-color: white;
     --recipe-backarrow: #ffa31a;
     --recipe-container-background: black;
@@ -64,7 +64,9 @@
     /*WAITING*/
     --waiting-background: #1b1b1b;
     --waiting-color: white;
-    --waiting-nom-cocktail: #ffa31a;
-    --waiting-dot: white;
-    --waiting-beer: #ffa31a;
+    --waiting-nom-cocktail: #1ed760;
+    --waiting-dot: black;
+    --waiting-beer: white;
+    --waiting-pacman: #1ed760;
+    --waiting-pacman-eye: black;
 }
