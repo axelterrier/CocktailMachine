@@ -42,4 +42,25 @@
     /*INGREDIENTS*/
     --ingredient-button-clickable: green;
     --ingredient-button-non-clickable: red;
+
+    /*RECAP INGREDIENT*/
+    --recap-background: #1b1b1b;
+    --recap-color: white;
+    --recap-back-arrow: #ffa31a;
+    --recap-card-background: #292929;
+
+    /*RECIPE*/
+    --recipe-background: 1b1b1b;
+    --recipe-color: white;
+    --recipe-backarrow: #ffa31a;
+    --recipe-container-background: black;
+    --recipe-button-background: #ffa31a;
+    --recipe-button-color: white;
+
+    /*WAITING*/
+    --waiting-background: #1b1b1b;
+    --waiting-color: white;
+    --waiting-nom-cocktail: #ffa31a;
+    --waiting-dot: white;
+    --waiting-beer: #ffa31a;
 }

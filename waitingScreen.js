@@ -1,30 +1,33 @@
-var worker = null;
-var loaded = 0;
 
-function increment() {
-    $('#counter').html(loaded+'%');
-    $('#drink').css('top', (100-loaded*.9)+'%');
-    if(loaded==25) $('#cubes div:nth-child(1)').fadeIn(100);
-    if(loaded==50) $('#cubes div:nth-child(2)').fadeIn(100);
-    if(loaded==75) $('#cubes div:nth-child(3)').fadeIn(100);
-    if(loaded==100) {
-        $('#lemon').fadeIn(100);
-        $('#straw').fadeIn(300);
-        loaded = 0;
-        stopLoading();
-        setTimeout(startLoading, 1000);
-    }
-    else loaded++;    
+
+function test(){
+    var docWidth = document.documentElement.offsetWidth;
+
+    [].forEach.call(
+      document.querySelectorAll('*'),
+      function(el) {
+        if (el.offsetWidth > docWidth) {
+          console.log(el);
+        }
+      }
+    );
 }
 
-function startLoading() {
-    $('#lemon').hide();
-    $('#straw').hide();
-    $('#cubes div').hide();
-    worker = setInterval(increment, 30);
-}
-function stopLoading() {
-    clearInterval(worker);
+console.log("test")
+
+
+function hideCircles(){
+    circles = document.getElementsByClassName("circles")
+    circles[0].style.transition = "all 0.5s"
+    circles[0].style.opacity = "0"
+    setTimeout(hidePacman, 300)    
 }
 
-startLoading();
+function hidePacman(){
+    pacman = document.getElementsByClassName("pacman")
+    pacman[0].style.transition = "all 1s"
+    pacman[0].style.transform = "translateX(30vw)"
+}
+
+
+setTimeout(hideCircles, 5000)

@@ -12,142 +12,345 @@ body {
 }
 
 html {
-    height: 100%;
-    max-width: 100%;
-    background-color: var(--homepage-background);
-    color: var(--homepage-text-color);
+    height: 100vh;
+    max-width: 100vw;
+    background-color: var(--waiting-background);
+    color: var(--waiting-color);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
     /* Enlever les rectangles bleus au clic */
 }
 
-a, a:hover, a:visited, a:active {
+a,
+a:hover,
+a:visited,
+a:active {
     color: var(--homepage-text-color);
     text-decoration: none;
 }
 
-.title{
+.title {
     width: 100%;
     height: 20%;
 }
 
 .title h1,
-.title h4{
+.title h4 {
     margin: 20px;
 }
 
-.title h4{
+.title h4 {
     font-weight: lighter;
 }
 
-.animation{
-    height: 60%;
-    width: 100%;
+.title span{
+    color: var(--waiting-nom-cocktail);
 }
 
-#loader {
+.loader {
     position: absolute;
-    top:50%; left:50%;
-    height:200px; width:100px;
-    margin-top:-100px; margin-left:-50px;
-}
-
-#glass {
-    position: relative;
-    height: 100%;
-    background: rgba(255,255,255,.1);
-    border-radius: 0% 0% 15% 15%;
-    border: 3px solid;
-    border-top: 0;
-    border-bottom: 20px solid;
-    border-color: rgba(8, 8, 8, 0.7);
+    top: 50%;
+    left: 50%;
+    height: 60px;
+    width: 90vw;
+    margin: 0;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     overflow: hidden;
+    margin-left: 5vw;
+}
+
+.circles {
+    position: absolute;
+    left: -5px;
+    top: 0;
+    height: 60px;
+    width: auto;
+}
+
+.circles span {
+    position: absolute;
+    top: 25px;
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    background-color: var(--waiting-dot)
+}
+
+.circles span.one {
+    right: 80px;
+    -webkit-animation: animcircles 0.5s infinite linear;
+    animation: animcircles 0.5s infinite linear
+}
+
+.circles span.two {
+    right: 40px;
+    -webkit-animation: animcircles 0.5s infinite linear;
+    animation: animcircles 0.5s infinite linear
+}
+
+.circles span.three {
+    right: 0px;
+    -webkit-animation: animcircles 0.5s infinite linear;
+    animation: animcircles 0.5s infinite linear
+}
+
+.circles span.four {
+    right: -40px;
+    -webkit-animation: animcircles 0.5s infinite linear;
+    animation: animcircles 0.5s infinite linear
+}
+
+.circles span.five {
+    right: -80px;
+    -webkit-animation: animcircles 0.5s infinite linear;
+    animation: animcircles 0.5s infinite linear
+}
+
+.circles span.six {
+    right: -120px;
+    -webkit-animation: animcircles 0.5s infinite linear;
+    animation: animcircles 0.5s infinite linear
+}
+
+.circles span.seven {
+    right: -160px;
+    -webkit-animation: animcircles 0.5s infinite linear;
+    animation: animcircles 0.5s infinite linear
+}
+
+.circles span.eight {
+    right: -200px;
+    -webkit-animation: animcircles 0.5s infinite linear;
+    animation: animcircles 0.5s infinite linear
+}
+
+.circles span.nine {
+    right: -240px;
+    -webkit-animation: animcircles 0.5s infinite linear;
+    animation: animcircles 0.5s infinite linear
+}
+
+.circles span.ten {
+    right: -280px;
+    -webkit-animation: animcircles 0.5s infinite linear;
+    animation: animcircles 0.5s infinite linear
+}
+
+.circles span.eleven {
+    right: -320px;
+    -webkit-animation: animcircles 0.5s infinite linear;
+    animation: animcircles 0.5s infinite linear
+}
+
+.circles span.twelve {
+    right: -360px;
+    -webkit-animation: animcircles 0.5s infinite linear;
+    animation: animcircles 0.5s infinite linear
+}
+
+.circles span.thirteen {
+    right: -400px;
+    -webkit-animation: animcircles 0.5s infinite linear;
+    animation: animcircles 0.5s infinite linear
+}
+
+.circles span.fourteen {
+    right: -440px;
+    -webkit-animation: animcircles 0.5s infinite linear;
+    animation: animcircles 0.5s infinite linear
+}
+
+.circles span.twenty {
+    right: -560px;
+    background-color: #1B1B1B;
+    border-radius: 0px;
     display: flex;
-    justify-content: center;
-}
-#drink {
-    position: absolute;
-    top:100%; right:0; bottom:0; left:0;
-    background: linear-gradient(to bottom, blue, orangered);
-    box-shadow: inset 0 2px 1px rgba(255,69,0,.2);
-    opacity: .7;
-}
-#counter {
-    position: relative;
-    line-height: 200px;
-    font-size: 22px;
-    color: rgba(255,255,255,1);
+    align-items: center;
+    justify-content: top;
+    animation: animcocktail 8.5s infinite linear;
+    margin-top: -2px;
+    height: 16px;
+    width: 16px;
 }
 
-#lemon {
-    display: none;
-    position: absolute;
-    top:0; right:0;
-    height:79px; width:79px;
-    margin-top:-38px; margin-right:-38px;
-    background: radial-gradient(#f7f3b6 10%, #d7d26c);
-    border-radius: 50%;
-    border: 4px solid #659e0f;
-    box-shadow: inset 0 0 0 2px #f7f3b6;
-}
-#straw {
-    display: none;
-    position: absolute;
-    bottom:20px; right:30%;
-    height:220px; width:6px;
-    background: steelblue;
-    border-radius: 0 6px 0 0;
-    transform: rotate(-18.5deg);
-    transform-origin: left bottom;
-    -webkit-transform: rotate(-18.5deg);
-    -webkit-transform-origin: left bottom;
-}
-#straw:after {
-    content: '';
-    position: absolute;
-    top:0; right:0;
-    height:6px; width:80px;
-    background: inherit;
-    border-radius: 0 6px 0 0;
+.twenty svg{
+    height: 300%;
+    width: auto;
+    fill: var(--waiting-beer);
+    animation: animsvg 1s infinite;
 }
 
-#cubes {
-    position: absolute;
-    top:0; right:0; bottom:0; left:0;
-}
-#cubes div {
-    /*display: none;*/
-    position: absolute;
-    width:50px; height:50px;
-    background: rgba(255,255,255,.3);
-    border-radius: 10px;
-    box-shadow: inset 0 0 10px rgba(255,255,255,.6);
-}
-#cubes div:nth-child(1) {
-    bottom:0;
-}
-#cubes div:nth-child(2) {
-    bottom:45px; left:25px;
-    transform: rotate(32deg);
-    transform-origin: center bottom;
-    -webkit-transform: rotate(32deg);
-    -webkit-transform-origin: center bottom;
-}
-#cubes div:nth-child(3) {
-    bottom:90px; left:20px;
-    transform: rotate(-34deg);
-    transform-origin: center bottom;
-    -webkit-transform: rotate(-34deg);
-    -webkit-transform-origin: center bottom;
+
+@-webkit-keyframes animcircles {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px)
+    }
+
+    100% {
+        -webkit-transform: translate(-40px, 0px);
+        transform: translate(-40px, 0px)
+    }
 }
 
-#coaster {
-    width: 130%; height: 4px;
-    margin-left: -15%;
-    background: steelblue;
-    border-radius: 2px;
+@keyframes animcircles {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px)
+    }
+
+    100% {
+        -webkit-transform: translate(-40px, 0px);
+        transform: translate(-40px, 0px)
+    }
 }
 
-.progressBar{
-    height: 20%;
-    width: 100%;
+@keyframes animcocktail {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px)
+    }
+
+    100% {
+        -webkit-transform: translate(-680px, 0px);
+        transform: translate(-680px, 0px)
+    }
+}
+
+@keyframes animsvg {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    50% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5)
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+
+
+.pacman {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 60px
+}
+
+.pacman .eye {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    height: 7px;
+    width: 7px;
+    border-radius: 7px;
+    background-color: #1C163A
+}
+
+.pacman span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 60px
+}
+
+.pacman span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 30px;
+    width: 60px;
+    background-color: #FFFB16
+}
+
+.pacman .top::before {
+    top: 0;
+    border-radius: 60px 60px 0px 0px
+}
+
+.pacman .bottom::before {
+    bottom: 0;
+    border-radius: 0px 0px 60px 60px
+}
+
+.pacman .left::before {
+    bottom: 0;
+    height: 60px;
+    width: 30px;
+    border-radius: 60px 0px 0px 60px
+}
+
+.pacman .top {
+    -webkit-animation: animtop 0.5s infinite;
+    animation: animtop 0.5s infinite
+}
+
+@-webkit-keyframes animtop {
+
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg)
+    }
+}
+
+@keyframes animtop {
+
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg)
+    }
+}
+
+.pacman .bottom {
+    -webkit-animation: animbottom 0.5s infinite;
+    animation: animbottom 0.5s infinite
+}
+
+@-webkit-keyframes animbottom {
+
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg)
+    }
+}
+
+@keyframes animbottom {
+
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg)
+    }
 }

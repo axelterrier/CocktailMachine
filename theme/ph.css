@@ -54,10 +54,17 @@
     --recap-card-background: #292929;
 
     /*RECIPE*/
-    --recipe-background: black;
+    --recipe-background: 1b1b1b;
     --recipe-color: white;
     --recipe-backarrow: #ffa31a;
-    --recipe-container-background: #292929;
+    --recipe-container-background: black;
     --recipe-button-background: #ffa31a;
     --recipe-button-color: white;
+
+    /*WAITING*/
+    --waiting-background: #1b1b1b;
+    --waiting-color: white;
+    --waiting-nom-cocktail: #ffa31a;
+    --waiting-dot: white;
+    --waiting-beer: #ffa31a;
 }
