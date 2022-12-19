@@ -1,0 +1,69 @@
+:root{
+    /* LOGIN AND REGISTER*/
+    --login-background: rgb(255, 255, 255);
+    --login-text: #191414;
+    --login-placeholder: #191414;
+    --login-input-background: white;
+    --login-input-border: #1db954;
+    --login-button-background: #1ed760;
+    --login-button-text: white;
+    --login-border-element: 50px;
+
+    /*HOME PAGE*/
+    --homepage-background: white;
+    --homepage-text-color: black;
+    --homepage-username: #1ed760;
+    --homepage-card: rgb(241, 236, 236);
+    --homepage-text-card-color: black;
+    --homepage-searchbar: lightgray;
+    --homepage-filter: lightgray;
+    --homepage-filter-color: black;
+    --homepage-active-filter: #1ed760;
+    --homepage-text-active-filter: white;
+    --homepage-footer-background: rgb(223, 221, 221);
+    --homepage-footer-svg: black;
+    --homepage-active-icon: #1db954;
+
+    /*THEME*/
+    --theme-backarrow: black;
+    --theme-background: white;
+    --theme-color: black;
+    --theme-individual-background: lightgray;
+    --theme-themetitle: white;
+
+    /*SETTINGS*/
+    --settings-background: white;
+    --settings-color: black;
+    --settings-backarrow: #1ed760;
+    --settings-parameterCard: rgb(223, 221, 221);
+    --settings-arrow: #1db954;
+    --settings-icon: rgb(40, 36, 36);
+
+    /*INGREDIENTS*/
+    --ingredient-button-clickable: green;
+    --ingredient-button-non-clickable: red;
+    --ingredient-separator: black;
+
+    /*RECAP INGREDIENT*/
+    --recap-background: #1b1b1b;
+    --recap-color: white;
+    --recap-back-arrow: #ffa31a;
+    --recap-card-background: #292929;
+
+    /*RECIPE*/
+    --recipe-background: 1b1b1b;
+    --recipe-color: black;
+    --recipe-backarrow: #1ed760;
+    --recipe-container-background: rgb(223, 221, 221);
+    --recipe-button-background: #1ed760;
+    --recipe-button-color: white;
+
+    /*WAITING*/
+    --waiting-background: white;
+    --waiting-color: black;
+    --waiting-nom-cocktail: #1ed760;
+    --waiting-dot: #165f2f;
+    --waiting-beer: #165f2f;
+    --waiting-pacman: #1ed760;
+    --waiting-pacman-eye: #165f2f;
+}
